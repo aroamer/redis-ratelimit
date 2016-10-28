@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+jar {
+version = 'SNAPSHOT'
+}
+repositories {
+    mavenLocal()
+     jcenter()
+}
+dependencies {
+  compile 'redis.clients:jedis:2.1.0'
+  testCompile 'junit:junit:4.11'
+  testCompile 'org.mockito:mockito-all:1.9.5'
+}
